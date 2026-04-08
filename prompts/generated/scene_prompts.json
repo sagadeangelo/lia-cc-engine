@@ -1,0 +1,222 @@
+{
+  "project_id": "1nefi_cap_01",
+  "title": "Capítulo 1nefi_cap_01",
+  "prompts": [
+    {
+      "scene_id": "s01",
+      "summary": "Yo, Nefi, nací de buenos padres y recibí, por tanto, alguna instrucción en toda la ciencia de mi padre; y habiendo conocido muchas aflicciones durante el curso de mi vida, siendo, no obstante, altamente favorecido del Señor todos mis días; sí, habiendo logrado un conocimiento grande de la bondad y los misterios de Dios, escribo, por tanto, la historia de los hechos de mi vida.",
+      "characters": [
+        "Nefi"
+      ],
+      "visual_focus": "character",
+      "narration": "Yo, Nefi, nací de buenos padres y recibí, por tanto, alguna instrucción en toda la ciencia de mi padre; y habiendo conocido muchas aflicciones durante el curso de mi vida, siendo, no obstante, altamente favorecido del Señor todos mis días; sí, habiendo logrado un conocimiento grande de la bondad y los misterios de Dios, escribo, por tanto, la historia de los hechos de mi vida.",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, young man (Nephi), faithful young prophet, calm but determined expression, simple ancient scriptural clothing, scene action: Yo, Nefi, nací de buenos padres y recibí, por tanto, alguna instrucción en toda la ciencia de mi padre; y habiendo conocido muchas aflicciones durante el curso de mi vida, siendo, no obstante, altamente favorecido del Señor todos mis días; sí, habiendo logrado un conocimiento grande de la bondad y los misterios de Dios, escribo, por tanto, la historia de los hechos de mi vida., ancient riverbank, natural environment, biblical landscape, emotional tone, solemn atmosphere, expressive storytelling, medium shot, centered composition, cinematic framing, subtle facial animation, slight blinking, gentle breathing, slight head movement, emotional eye focus, soft expression changes, Pixar style animated realism, cinematic 3D animation, expressive face, soft skin shading, clean anatomy, correct hands, stable face, consistent facial identity, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, frozen face, stiff face, emotionless, robotic face, lifeless eyes, static pose, extra limbs",
+      "camera_motion": "gentle cinematic push",
+      "animation_hint": "subtle facial animation, slight blinking, gentle breathing, slight head movement, emotional eye focus, soft expression changes",
+      "render_profile": "standard"
+    },
+    {
+      "scene_id": "s02",
+      "summary": "Sí, hago la relación en el lenguaje de mi padre, que se compone de la ciencia de los judíos y el idioma de los egipcios. Y sé que la historia que escribo es verdadera; y la escribo de mi propia mano, con arreglo a mis conocimientos.",
+      "characters": [],
+      "visual_focus": "environment",
+      "narration": "Sí, hago la relación en el lenguaje de mi padre, que se compone de la ciencia de los judíos y el idioma de los egipcios. Y sé que la historia que escribo es verdadera; y la escribo de mi propia mano, con arreglo a mis conocimientos.",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, scene action: Sí, hago la relación en el lenguaje de mi padre, que se compone de la ciencia de los judíos y el idioma de los egipcios. Y sé que la historia que escribo es verdadera; y la escribo de mi propia mano, con arreglo a mis conocimientos., biblical environment, ancient atmosphere, solemn biblical atmosphere, cinematic storytelling, ancient biblical environment, no single character portrait, environmental storytelling, wide cinematic shot, environmental storytelling, no face focus, subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion, cinematic biblical environment, dramatic composition, volumetric light, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, random portrait, single face close-up, unwanted character portrait, modern objects, urban elements, sci-fi technology",
+      "camera_motion": "slow cinematic drift",
+      "animation_hint": "subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion",
+      "render_profile": "environment"
+    },
+    {
+      "scene_id": "s03",
+      "summary": "Pues sucedió que al comenzar el primer año del reinado de Sedequías, rey de Judá (mi padre Lehi había morado en Jerusalén toda su vida), llegaron muchos profetas ese mismo año profetizando al pueblo que se arrepintiera, o la gran ciudad de Jerusalén sería destruida.",
+      "characters": [
+        "Lehi"
+      ],
+      "visual_focus": "character",
+      "narration": "Pues sucedió que al comenzar el primer año del reinado de Sedequías, rey de Judá (mi padre Lehi había morado en Jerusalén toda su vida), llegaron muchos profetas ese mismo año profetizando al pueblo que se arrepintiera, o la gran ciudad de Jerusalén sería destruida.",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, older man (Lehi), wise prophet, solemn expression, ancient biblical robes, scene action: Pues sucedió que al comenzar el primer año del reinado de Sedequías, rey de Judá (mi padre Lehi había morado en Jerusalén toda su vida), llegaron muchos profetas ese mismo año profetizando al pueblo que se arrepintiera, o la gran ciudad de Jerusalén sería destruida., ancient city environment, stone architecture, historical atmosphere, prophetic tone, spiritual intensity, dramatic atmosphere, medium shot, centered composition, cinematic framing, subtle facial animation, slight blinking, gentle breathing, slight head movement, quiet intensity, slight body sway, Pixar style animated realism, cinematic 3D animation, expressive face, soft skin shading, clean anatomy, correct hands, stable face, consistent facial identity, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, frozen face, stiff face, emotionless, robotic face, lifeless eyes, static pose, extra limbs",
+      "camera_motion": "slow dramatic push in",
+      "animation_hint": "subtle facial animation, slight blinking, gentle breathing, slight head movement, quiet intensity, slight body sway",
+      "render_profile": "standard"
+    },
+    {
+      "scene_id": "s04",
+      "summary": "Aconteció, por tanto, que mientras iba por su camino, mi padre Lehi oró al Señor, sí, con todo su corazón, a favor de su pueblo. Y ocurrió que mientras estaba orando al Señor, apareció ante él, sobre una roca, un pilar de fuego; y fue mucho lo que vio y oyó; y se estremeció y tembló extremadamente por las cosas que vio y oyó.",
+      "characters": [
+        "Lehi"
+      ],
+      "visual_focus": "character",
+      "narration": "Aconteció, por tanto, que mientras iba por su camino, mi padre Lehi oró al Señor, sí, con todo su corazón, a favor de su pueblo. Y ocurrió que mientras estaba orando al Señor, apareció ante él, sobre una roca, un pilar de fuego; y fue mucho lo que vio y oyó; y se estremeció y tembló extremadamente por las cosas que vio y oyó.",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, older man (Lehi), wise prophet, solemn expression, ancient biblical robes, scene action: Aconteció, por tanto, que mientras iba por su camino, mi padre Lehi oró al Señor, sí, con todo su corazón, a favor de su pueblo. Y ocurrió que mientras estaba orando al Señor, apareció ante él, sobre una roca, un pilar de fuego; y fue mucho lo que vio y oyó; y se estremeció y tembló extremadamente por las cosas que vio y oyó., rocky exterior, desert stone, dramatic natural light, emotional tone, solemn atmosphere, expressive storytelling, medium close-up, expressive face, character focus, subtle facial animation, slight blinking, gentle breathing, slight head movement, emotional eye focus, soft expression changes, Pixar style animated realism, cinematic 3D animation, expressive face, soft skin shading, clean anatomy, correct hands, stable face, consistent facial identity, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, frozen face, stiff face, emotionless, robotic face, lifeless eyes, static pose, extra limbs",
+      "camera_motion": "gentle cinematic push",
+      "animation_hint": "subtle facial animation, slight blinking, gentle breathing, slight head movement, emotional eye focus, soft expression changes",
+      "render_profile": "standard"
+    },
+    {
+      "scene_id": "s05",
+      "summary": "Y sucedió que volvió a su casa en Jerusalén, y se echó sobre su lecho, dominado por el Espíritu y por las cosas que había visto. Y dominado de esta manera por el Espíritu, fue arrebatado en una visión, en la que vio abrirse los cielos, y creyó ver a Dios sentado en su trono, rodeado de innumerables concursos de ángeles, en actitud de estar cantando y alabando a su Dios.",
+      "characters": [],
+      "visual_focus": "environment",
+      "narration": "Y sucedió que volvió a su casa en Jerusalén, y se echó sobre su lecho, dominado por el Espíritu y por las cosas que había visto. Y dominado de esta manera por el Espíritu, fue arrebatado en una visión, en la que vio abrirse los cielos, y creyó ver a Dios sentado en su trono, rodeado de innumerables concursos de ángeles, en actitud de estar cantando y alabando a su Dios.",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, scene action: Y sucedió que volvió a su casa en Jerusalén, y se echó sobre su lecho, dominado por el Espíritu y por las cosas que había visto. Y dominado de esta manera por el Espíritu, fue arrebatado en una visión, en la que vio abrirse los cielos, y creyó ver a Dios sentado en su trono, rodeado de innumerables concursos de ángeles, en actitud de estar cantando y alabando a su Dios., ancient city environment, stone architecture, historical atmosphere, sacred overwhelming atmosphere, divine presence, spiritual intensity, ancient biblical environment, no single character portrait, environmental storytelling, wide cinematic shot, environmental storytelling, no face focus, subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion, cinematic biblical environment, dramatic composition, volumetric light, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, random portrait, single face close-up, unwanted character portrait, modern objects, urban elements, sci-fi technology",
+      "camera_motion": "slow cinematic drift",
+      "animation_hint": "subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion",
+      "render_profile": "environment"
+    },
+    {
+      "scene_id": "s06",
+      "summary": "Y sucedió que vio a Uno que descendía del cielo, y vio que su resplandor era mayor que el del sol al mediodía. Y vio también que lo seguían otros doce, cuyo brillo excedía al de las estrellas del firmamento.",
+      "characters": [],
+      "visual_focus": "environment",
+      "narration": "Y sucedió que vio a Uno que descendía del cielo, y vio que su resplandor era mayor que el del sol al mediodía. Y vio también que lo seguían otros doce, cuyo brillo excedía al de las estrellas del firmamento.",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, scene action: Y sucedió que vio a Uno que descendía del cielo, y vio que su resplandor era mayor que el del sol al mediodía. Y vio también que lo seguían otros doce, cuyo brillo excedía al de las estrellas del firmamento., biblical environment, ancient atmosphere, solemn biblical atmosphere, cinematic storytelling, ancient biblical environment, no single character portrait, environmental storytelling, wide cinematic shot, environmental storytelling, no face focus, subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion, cinematic biblical environment, dramatic composition, volumetric light, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, random portrait, single face close-up, unwanted character portrait, modern objects, urban elements, sci-fi technology",
+      "camera_motion": "slow cinematic drift",
+      "animation_hint": "subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion",
+      "render_profile": "environment"
+    },
+    {
+      "scene_id": "s07",
+      "summary": "Y descendieron y avanzaron por la faz de la tierra; y el primero llegó hasta donde estaba mi padre, y le dio un libro y le mandó que lo leyera.",
+      "characters": [],
+      "visual_focus": "environment",
+      "narration": "Y descendieron y avanzaron por la faz de la tierra; y el primero llegó hasta donde estaba mi padre, y le dio un libro y le mandó que lo leyera.",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, scene action: Y descendieron y avanzaron por la faz de la tierra; y el primero llegó hasta donde estaba mi padre, y le dio un libro y le mandó que lo leyera., biblical environment, ancient atmosphere, solemn biblical atmosphere, cinematic storytelling, ancient biblical environment, no single character portrait, environmental storytelling, wide cinematic shot, environmental storytelling, no face focus, subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion, cinematic biblical environment, dramatic composition, volumetric light, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, random portrait, single face close-up, unwanted character portrait, modern objects, urban elements, sci-fi technology",
+      "camera_motion": "slow cinematic drift",
+      "animation_hint": "subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion",
+      "render_profile": "environment"
+    },
+    {
+      "scene_id": "s08",
+      "summary": "Y sucedió que mientras leía, fue lleno del Espíritu del Señor. Y leyó, diciendo: ¡Ay, ay de ti, Jerusalén, porque he visto tus abominaciones! Sí, mi padre leyó muchas cosas concernientes a Jerusalén: que sería destruida, así como sus habitantes; que muchos perecerían por la espada y muchos serían llevados cautivos a Babilonia.",
+      "characters": [],
+      "visual_focus": "environment",
+      "narration": "Y sucedió que mientras leía, fue lleno del Espíritu del Señor. Y leyó, diciendo: ¡Ay, ay de ti, Jerusalén, porque he visto tus abominaciones! Sí, mi padre leyó muchas cosas concernientes a Jerusalén: que sería destruida, así como sus habitantes; que muchos perecerían por la espada y muchos serían llevados cautivos a Babilonia.",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, scene action: Y sucedió que mientras leía, fue lleno del Espíritu del Señor. Y leyó, diciendo: ¡Ay, ay de ti, Jerusalén, porque he visto tus abominaciones! Sí, mi padre leyó muchas cosas concernientes a Jerusalén: que sería destruida, así como sus habitantes; que muchos perecerían por la espada y muchos serían llevados cautivos a Babilonia., ancient city environment, stone architecture, historical atmosphere, prophetic tone, spiritual intensity, dramatic atmosphere, ancient biblical environment, no single character portrait, environmental storytelling, wide cinematic shot, environmental storytelling, no face focus, subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion, cinematic biblical environment, dramatic composition, volumetric light, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, random portrait, single face close-up, unwanted character portrait, modern objects, urban elements, sci-fi technology",
+      "camera_motion": "slow cinematic drift",
+      "animation_hint": "subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion",
+      "render_profile": "environment"
+    },
+    {
+      "scene_id": "s09",
+      "summary": "Y acaeció que cuando mi padre hubo leído y visto muchas cosas grandes y maravillosas, prorrumpió en exclamaciones al Señor, tales como: ¡Cuán grandes y maravillosas son tus obras, oh Señor Dios Todopoderoso!",
+      "characters": [],
+      "visual_focus": "environment",
+      "narration": "Y acaeció que cuando mi padre hubo leído y visto muchas cosas grandes y maravillosas, prorrumpió en exclamaciones al Señor, tales como: ¡Cuán grandes y maravillosas son tus obras, oh Señor Dios Todopoderoso!",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, scene action: Y acaeció que cuando mi padre hubo leído y visto muchas cosas grandes y maravillosas, prorrumpió en exclamaciones al Señor, tales como: ¡Cuán grandes y maravillosas son tus obras, oh Señor Dios Todopoderoso!, biblical seashore, ancient coastal atmosphere, natural dramatic light, solemn biblical atmosphere, cinematic storytelling, ancient biblical environment, no single character portrait, environmental storytelling, wide cinematic shot, environmental storytelling, no face focus, subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion, cinematic biblical environment, dramatic composition, volumetric light, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, random portrait, single face close-up, unwanted character portrait, modern objects, urban elements, sci-fi technology",
+      "camera_motion": "slow cinematic drift",
+      "animation_hint": "subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion",
+      "render_profile": "environment"
+    },
+    {
+      "scene_id": "s10",
+      "summary": "¡Tu trono se eleva en las alturas de los cielos, y tu poder, y tu bondad y misericordia se extienden sobre todos los habitantes de la tierra; y porque eres misericordioso, no dejarás perecer a los que acudan a ti!",
+      "characters": [],
+      "visual_focus": "vision",
+      "narration": "¡Tu trono se eleva en las alturas de los cielos, y tu poder, y tu bondad y misericordia se extienden sobre todos los habitantes de la tierra; y porque eres misericordioso, no dejarás perecer a los que acudan a ti!",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, scene action: ¡Tu trono se eleva en las alturas de los cielos, y tu poder, y tu bondad y misericordia se extienden sobre todos los habitantes de la tierra; y porque eres misericordioso, no dejarás perecer a los que acudan a ti!, heavenly vision, glowing sky, divine light, celestial atmosphere, sacred overwhelming atmosphere, divine presence, spiritual intensity, divine vision, celestial light, sacred environment, no single character portrait, environmental storytelling, wide cinematic composition, dramatic divine scale, environmental storytelling, glowing particles, soft divine movement, spiritual atmosphere, subtle cinematic motion, cinematic biblical environment, dramatic composition, volumetric light, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, random portrait, single face close-up, unwanted character portrait, modern objects, urban elements, sci-fi technology",
+      "camera_motion": "slow dramatic push in",
+      "animation_hint": "glowing particles, soft divine movement, spiritual atmosphere, subtle cinematic motion",
+      "render_profile": "vision"
+    },
+    {
+      "scene_id": "s11",
+      "summary": "Así se expresaba mi padre en alabanzas a su Dios; porque su alma se regocijaba y todo su corazón estaba henchido a causa de las cosas que había visto, sí, que el Señor le había mostrado.",
+      "characters": [],
+      "visual_focus": "environment",
+      "narration": "Así se expresaba mi padre en alabanzas a su Dios; porque su alma se regocijaba y todo su corazón estaba henchido a causa de las cosas que había visto, sí, que el Señor le había mostrado.",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, scene action: Así se expresaba mi padre en alabanzas a su Dios; porque su alma se regocijaba y todo su corazón estaba henchido a causa de las cosas que había visto, sí, que el Señor le había mostrado., biblical environment, ancient atmosphere, solemn biblical atmosphere, cinematic storytelling, ancient biblical environment, no single character portrait, environmental storytelling, wide cinematic shot, environmental storytelling, no face focus, subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion, cinematic biblical environment, dramatic composition, volumetric light, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, random portrait, single face close-up, unwanted character portrait, modern objects, urban elements, sci-fi technology",
+      "camera_motion": "slow cinematic drift",
+      "animation_hint": "subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion",
+      "render_profile": "environment"
+    },
+    {
+      "scene_id": "s12",
+      "summary": "Y yo, Nefi, no doy cuenta completa de lo que mi padre ha escrito, porque ha escrito muchas cosas que vio en visiones y sueños; y ha escrito también muchas cosas que profetizó y habló a sus hijos, de las que no daré cuenta entera, sino que haré una relación de los hechos de mi vida.",
+      "characters": [
+        "Nefi"
+      ],
+      "visual_focus": "character",
+      "narration": "Y yo, Nefi, no doy cuenta completa de lo que mi padre ha escrito, porque ha escrito muchas cosas que vio en visiones y sueños; y ha escrito también muchas cosas que profetizó y habló a sus hijos, de las que no daré cuenta entera, sino que haré una relación de los hechos de mi vida.",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, young man (Nephi), faithful young prophet, calm but determined expression, simple ancient scriptural clothing, scene action: Y yo, Nefi, no doy cuenta completa de lo que mi padre ha escrito, porque ha escrito muchas cosas que vio en visiones y sueños; y ha escrito también muchas cosas que profetizó y habló a sus hijos, de las que no daré cuenta entera, sino que haré una relación de los hechos de mi vida., biblical environment, ancient atmosphere, prophetic tone, spiritual intensity, dramatic atmosphere, medium close-up, expressive face, character focus, subtle facial animation, slight blinking, gentle breathing, slight head movement, quiet intensity, slight body sway, Pixar style animated realism, cinematic 3D animation, expressive face, soft skin shading, clean anatomy, correct hands, stable face, consistent facial identity, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, frozen face, stiff face, emotionless, robotic face, lifeless eyes, static pose, extra limbs",
+      "camera_motion": "slow dramatic push in",
+      "animation_hint": "subtle facial animation, slight blinking, gentle breathing, slight head movement, quiet intensity, slight body sway",
+      "render_profile": "standard"
+    },
+    {
+      "scene_id": "s13",
+      "summary": "He aquí, haré un compendio de los anales de mi padre sobre planchas que he preparado con mis propias manos; por tanto, después que los haya compendiado, escribiré la historia de mi propia vida.",
+      "characters": [],
+      "visual_focus": "environment",
+      "narration": "He aquí, haré un compendio de los anales de mi padre sobre planchas que he preparado con mis propias manos; por tanto, después que los haya compendiado, escribiré la historia de mi propia vida.",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, scene action: He aquí, haré un compendio de los anales de mi padre sobre planchas que he preparado con mis propias manos; por tanto, después que los haya compendiado, escribiré la historia de mi propia vida., biblical environment, ancient atmosphere, solemn biblical atmosphere, cinematic storytelling, ancient biblical environment, no single character portrait, environmental storytelling, wide cinematic shot, environmental storytelling, no face focus, subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion, cinematic biblical environment, dramatic composition, volumetric light, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, random portrait, single face close-up, unwanted character portrait, modern objects, urban elements, sci-fi technology",
+      "camera_motion": "slow cinematic drift",
+      "animation_hint": "subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion",
+      "render_profile": "environment"
+    },
+    {
+      "scene_id": "s14",
+      "summary": "Por lo tanto, quisiera que supieseis que después que el Señor hubo mostrado a mi padre Lehi tantas cosas maravillosas, sí, con respecto a la destrucción de Jerusalén, he aquí, mi padre salió entre el pueblo y empezó a profetizar y a declararles concerniente a lo que él había visto y oído.",
+      "characters": [
+        "Lehi"
+      ],
+      "visual_focus": "character",
+      "narration": "Por lo tanto, quisiera que supieseis que después que el Señor hubo mostrado a mi padre Lehi tantas cosas maravillosas, sí, con respecto a la destrucción de Jerusalén, he aquí, mi padre salió entre el pueblo y empezó a profetizar y a declararles concerniente a lo que él había visto y oído.",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, older man (Lehi), wise prophet, solemn expression, ancient biblical robes, scene action: Por lo tanto, quisiera que supieseis que después que el Señor hubo mostrado a mi padre Lehi tantas cosas maravillosas, sí, con respecto a la destrucción de Jerusalén, he aquí, mi padre salió entre el pueblo y empezó a profetizar y a declararles concerniente a lo que él había visto y oído., ancient city environment, stone architecture, historical atmosphere, prophetic tone, spiritual intensity, dramatic atmosphere, wide cinematic shot, strong environmental storytelling, subtle facial animation, slight blinking, gentle breathing, slight head movement, quiet intensity, slight body sway, Pixar style animated realism, cinematic 3D animation, expressive face, soft skin shading, clean anatomy, correct hands, stable face, consistent facial identity, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, frozen face, stiff face, emotionless, robotic face, lifeless eyes, static pose, extra limbs",
+      "camera_motion": "slow forward push",
+      "animation_hint": "subtle facial animation, slight blinking, gentle breathing, slight head movement, quiet intensity, slight body sway",
+      "render_profile": "wide"
+    },
+    {
+      "scene_id": "s15",
+      "summary": "Y aconteció que los judíos se burlaron de él por las cosas que testificó de ellos, porque verdaderamente les testificó de sus maldades y abominaciones; y les dio testimonio de que las cosas que había visto y oído, así como las que había leído en el libro, manifestaban claramente la venida de un Mesías y también la redención del mundo.",
+      "characters": [],
+      "visual_focus": "environment",
+      "narration": "Y aconteció que los judíos se burlaron de él por las cosas que testificó de ellos, porque verdaderamente les testificó de sus maldades y abominaciones; y les dio testimonio de que las cosas que había visto y oído, así como las que había leído en el libro, manifestaban claramente la venida de un Mesías y también la redención del mundo.",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, scene action: Y aconteció que los judíos se burlaron de él por las cosas que testificó de ellos, porque verdaderamente les testificó de sus maldades y abominaciones; y les dio testimonio de que las cosas que había visto y oído, así como las que había leído en el libro, manifestaban claramente la venida de un Mesías y también la redención del mundo., biblical environment, ancient atmosphere, solemn biblical atmosphere, cinematic storytelling, ancient biblical environment, no single character portrait, environmental storytelling, wide cinematic shot, environmental storytelling, no face focus, subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion, cinematic biblical environment, dramatic composition, volumetric light, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, random portrait, single face close-up, unwanted character portrait, modern objects, urban elements, sci-fi technology",
+      "camera_motion": "slow cinematic drift",
+      "animation_hint": "subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion",
+      "render_profile": "environment"
+    },
+    {
+      "scene_id": "s16",
+      "summary": "Y cuando los judíos oyeron esto, se irritaron contra él, sí, tal como contra los profetas de la antigüedad, a quienes habían echado fuera, y apedreado, y matado; y procuraron también quitarle la vida.",
+      "characters": [],
+      "visual_focus": "environment",
+      "narration": "Y cuando los judíos oyeron esto, se irritaron contra él, sí, tal como contra los profetas de la antigüedad, a quienes habían echado fuera, y apedreado, y matado; y procuraron también quitarle la vida.",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, scene action: Y cuando los judíos oyeron esto, se irritaron contra él, sí, tal como contra los profetas de la antigüedad, a quienes habían echado fuera, y apedreado, y matado; y procuraron también quitarle la vida., biblical environment, ancient atmosphere, solemn biblical atmosphere, cinematic storytelling, ancient biblical environment, no single character portrait, environmental storytelling, wide cinematic shot, environmental storytelling, no face focus, subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion, cinematic biblical environment, dramatic composition, volumetric light, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, random portrait, single face close-up, unwanted character portrait, modern objects, urban elements, sci-fi technology",
+      "camera_motion": "slow cinematic drift",
+      "animation_hint": "subtle environmental motion, moving light, drifting atmosphere, gentle cinematic motion",
+      "render_profile": "environment"
+    },
+    {
+      "scene_id": "s17",
+      "summary": "Pero he aquí, yo, Nefi, os mostraré que las tiernas misericordias del Señor se extienden sobre todos aquellos que, a causa de su fe, él ha escogido, para hacerlos poderosos, sí, hasta tener el poder de librarse.",
+      "characters": [
+        "Nefi"
+      ],
+      "visual_focus": "character",
+      "narration": "Pero he aquí, yo, Nefi, os mostraré que las tiernas misericordias del Señor se extienden sobre todos aquellos que, a causa de su fe, él ha escogido, para hacerlos poderosos, sí, hasta tener el poder de librarse.",
+      "positive_prompt": "cinematic 3D character, semi-realistic animated style, subtle Pixar influence, single subject, centered composition, clean framing, expressive eyes, simple ancient scriptural clothing, natural lighting, cinematic atmosphere, global illumination, unreal engine style render, depth of field, emotional storytelling, 9:16 vertical composition, masterpiece, young man (Nephi), faithful young prophet, calm but determined expression, simple ancient scriptural clothing, scene action: Pero he aquí, yo, Nefi, os mostraré que las tiernas misericordias del Señor se extienden sobre todos aquellos que, a causa de su fe, él ha escogido, para hacerlos poderosos, sí, hasta tener el poder de librarse., biblical environment, ancient atmosphere, reflective spiritual tone, contemplative atmosphere, medium shot, centered composition, cinematic framing, subtle facial animation, slight blinking, gentle breathing, slight head movement, contemplative expression, calm body posture, Pixar style animated realism, cinematic 3D animation, expressive face, soft skin shading, clean anatomy, correct hands, stable face, consistent facial identity, depth of field, global illumination, masterpiece",
+      "negative_prompt": "multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, armor, fantasy outfit, excessive ornaments, cartoon, anime, blurry, low quality, watermark, text, logo, multiple people, extra person, duplicate face, extra head, bad anatomy, extra arms, extra hands, extra fingers, malformed hands, blurry, low quality, watermark, text, logo, frozen face, stiff face, emotionless, robotic face, lifeless eyes, static pose, extra limbs",
+      "camera_motion": "subtle cinematic movement",
+      "animation_hint": "subtle facial animation, slight blinking, gentle breathing, slight head movement, contemplative expression, calm body posture",
+      "render_profile": "standard"
+    }
+  ]
+}

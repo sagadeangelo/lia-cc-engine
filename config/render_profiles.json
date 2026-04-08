@@ -1,0 +1,20 @@
+{
+  "draft": {
+    "width": 512,
+    "height": 896,
+    "steps": 20,
+    "cfg": 4.5
+  },
+  "standard": {
+    "width": 576,
+    "height": 1024,
+    "steps": 28,
+    "cfg": 5.0
+  },
+  "premium": {
+    "width": 768,
+    "height": 1344,
+    "steps": 32,
+    "cfg": 5.5
+  }
+}

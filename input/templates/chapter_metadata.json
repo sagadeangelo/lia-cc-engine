@@ -1,0 +1,9 @@
+{
+  "project_id": "demo_project",
+  "title": "Capítulo de prueba",
+  "source": "Libro de Mormón",
+  "book": "1 Nefi",
+  "chapter": 1,
+  "language": "es",
+  "style": "semi_realistic_3d"
+}

@@ -1,0 +1,152 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "realistas/photon_v1.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "input_reference.png"
+    }
+  },
+  "3": {
+    "class_type": "ResizeAndPadImage",
+    "inputs": {
+      "image": [
+        "2",
+        0
+      ],
+      "target_width": 512,
+      "target_height": 896,
+      "padding_color": "black",
+      "interpolation": "nearest-exact"
+    }
+  },
+  "4": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "3",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "5": {
+    "class_type": "ADE_StandardStaticContextOptions",
+    "inputs": {
+      "context_length": 8,
+      "context_overlap": 2,
+      "fuse_method": "flat"
+    }
+  },
+  "6": {
+    "class_type": "ADE_AnimateDiffLoaderGen1",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "model_name": "mm_sd_v15_v2.ckpt",
+      "beta_schedule": "autoselect",
+      "context_options": [
+        "5",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "ADE_EmptySampleSettings",
+    "inputs": {
+      "batch_offset": 0,
+      "noise_type": "default",
+      "seed_gen": "comfy",
+      "seed_offset": 0,
+      "adapt_denoise_steps": false
+    }
+  },
+  "8": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "Pixar style animated character, cinematic 3D animation, expressive face, soft skin shading, clean render, stylized but realistic, subtle facial motion, slight blinking, gentle breathing, slight head movement, calm natural idle animation, soft eye movement, cinematic lighting, stable face, consistent facial identity, clean anatomy, warm natural light, depth of field, masterpiece"
+    }
+  },
+  "9": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "frozen face, stiff face, emotionless, no movement, static pose, robotic face, dead eyes, bad hands, extra fingers, malformed hands, broken anatomy, duplicate limbs, blurry, low quality, watermark, text, noise, artifacts"
+    }
+  },
+  "10": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "6",
+        0
+      ],
+      "positive": [
+        "8",
+        0
+      ],
+      "negative": [
+        "9",
+        0
+      ],
+      "latent_image": [
+        "4",
+        0
+      ],
+      "seed": 123456789,
+      "steps": 20,
+      "cfg": 4.2,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.22
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VHS_VideoCombine",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "frame_rate": 12,
+      "loop_count": 0,
+      "filename_prefix": "LIA_CC_production_clip",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 17,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true
+    }
+  }
+}

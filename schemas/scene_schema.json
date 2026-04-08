@@ -1,0 +1,22 @@
+{
+  "project_id": "string",
+  "title": "string",
+  "source": "Biblia o Libro de Mormón",
+  "style": "semi_realistic_3d",
+  "scenes": [
+    {
+      "scene_id": "s01",
+      "summary": "Resumen corto de la escena",
+      "characters": [
+        "Personaje 1"
+      ],
+      "dialogue": "",
+      "location": "desierto",
+      "mood": "solemne",
+      "shot_type": "medium",
+      "duration_sec": 3,
+      "positive_prompt": "",
+      "negative_prompt": ""
+    }
+  ]
+}

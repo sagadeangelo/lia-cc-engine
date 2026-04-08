@@ -1,0 +1,10 @@
+{
+  "project_name": "LIA-CC",
+  "root_path": "D:\\LIA-CUENTA_CUENTOS",
+  "default_language": "es",
+  "default_aspect_ratio": "9:16",
+  "default_style": "semi_realistic_3d",
+  "default_fps": 24,
+  "default_scene_duration_sec": 3,
+  "log_level": "INFO"
+}
