@@ -1,5 +1,5 @@
 # =========================
-# PYTHON
+# 🐍 PYTHON
 # =========================
 __pycache__/
 *.py[cod]
@@ -8,7 +8,7 @@ __pycache__/
 *.py.class
 
 # =========================
-# VIRTUAL ENVS
+# 🧪 VIRTUAL ENVS
 # =========================
 venv/
 .venv/
@@ -16,34 +16,60 @@ ENV/
 env/
 
 # =========================
-# LIA-CC (SOLO PESADO)
+# 🎬 LIA-CC (ARCHIVOS PESADOS)
 # =========================
 
-# 🔥 NO ignorar todo projects, solo contenido pesado
+# ❌ NO subir renders ni videos finales
 projects/*/renders/
 projects/*/clips/
-projects/*/audio/
 projects/*/final/
+
+# ❌ outputs temporales
 projects/*/temp*
 projects/*/output/
 
-# Opcional (si no quieres subir input)
-# projects/*/input/
+# ❌ audio generado (pesado)
+projects/*/audio/
+
+# ❌ imágenes sueltas
+*.png
+*.jpg
+*.jpeg
+
+# ❌ videos
+*.mp4
+*.mov
+
+# ❌ audio
+*.mp3
+*.wav
 
 # =========================
-# CONFIG SENSIBLE
+# ⚠️ IMPORTANTE (NO IGNORAR)
+# =========================
+# ✅ scripts/
+# ✅ prompts/
+# ✅ scenes/
+# ✅ configs
+# ✅ timeline.json
+# ✅ hooks.json
+
+# (esto se logra NO ignorando projects/* completo)
+
+# =========================
+# 🔐 CONFIG SENSIBLE
 # =========================
 .env
 config/comfyui_config.json
 
 # =========================
-# IDEs
+# 💻 IDEs
 # =========================
 .vscode/
 .idea/
 
 # =========================
-# OS
+# 🖥️ OS
 # =========================
 .DS_Store
 Thumbs.db

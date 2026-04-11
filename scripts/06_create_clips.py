@@ -1,64 +1,62 @@
 from pathlib import Path
 import sys
-import time
+import subprocess
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-from env_config import get_project_dir
-from moviepy.video.io.ImageSequenceClip import ImageSequenceClip
-from PIL import Image
+from env_config import BASE_DIR
+
+VIDEO_FORMAT = "vertical"  # "horizontal"
+FPS = 25
+DURATION_BASE = 5
+
+
+def get_project_id():
+    if len(sys.argv) < 2:
+        raise SystemExit("Uso: python scripts/06_create_clips.py <project_id>")
+    return sys.argv[1]
 
 
 def main():
-    project_id = sys.argv[1]
-    project_dir = get_project_dir(project_id)
+    project_id = get_project_id()
+    project_root = BASE_DIR / "projects" / project_id
 
-    images_dir = project_dir / "output"
-    images = sorted(images_dir.glob("*.png"))
-    temp_dir = project_dir / "temp_frames"
-    temp_dir.mkdir(exist_ok=True)
+    renders_dir = project_root / "renders"
+    clips_dir = project_root / "clips"
 
-    print(f"🎬 Generando video para {project_id}")
+    clips_dir.mkdir(exist_ok=True)
 
-    # 🔥 filtrar imágenes recientes (últimos 5 minutos)
-    now = time.time()
-    last_minutes = 60 * 60  # 1 hora
-
-    images = sorted(comfy_output.glob("*.png"), key=lambda x: x.stat().st_mtime)
-
-    # 🔥 tomar solo las últimas 20 imágenes (ajusta según tus escenas)
-    images = images[-20:]
+    images = sorted(renders_dir.glob("*.png"))
 
     if not images:
-        print("❌ No hay imágenes recientes en ComfyUI")
+        print("❌ No hay imágenes en renders/")
         return
 
-    print(f"📸 Imágenes detectadas: {len(images)}")
+    print(f"🎬 Creando clips para {len(images)} escenas...")
 
-    # 🔥 tamaño base
-    base_size = Image.open(images[0]).size
+    for i, img in enumerate(images):
+        output_clip = clips_dir / f"clip_{i:03}.mp4"
 
-    processed_paths = []
+        scale = "1080:1920" if VIDEO_FORMAT == "vertical" else "1920:1080"
 
-    for i, img_path in enumerate(images):
-        img = Image.open(img_path).convert("RGB")
+        cmd = [
+            "ffmpeg",
+            "-y",
+            "-loop", "1",
+            "-i", str(img),
+            "-t", str(DURATION_BASE),
+            "-vf", f"scale={scale},zoompan=z='if(lte(zoom,1.0),1.1,zoom-0.0005)'",
+            "-c:v", "libx264",
+            "-pix_fmt", "yuv420p",
+            "-r", str(FPS),
+            str(output_clip)
+      ]
 
-        # 🔥 normalizar tamaño
-        img = img.resize(base_size)
+        subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-        new_path = temp_dir / f"frame_{i:03}.png"
-        img.save(new_path)
+        print(f"✅ {output_clip.name}")
 
-        processed_paths.append(str(new_path))
-
-    print("🎞️ Construyendo video...")
-
-    clip = ImageSequenceClip(processed_paths, fps=2)
-
-    output_video = project_dir / "output" / "video.mp4"
-    clip.write_videofile(str(output_video), codec="libx264")
-
-    print(f"✅ Video generado en: {output_video}")
+    print("🔥 Clips creados correctamente")
 
 
 if __name__ == "__main__":

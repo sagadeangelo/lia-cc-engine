@@ -1,0 +1,48 @@
+{
+  "hooks": [
+    {
+      "scene_id": "s01",
+      "hook": "Todo comenzó aquí..."
+    },
+    {
+      "scene_id": "s02",
+      "hook": "Algo no estaba bien..."
+    },
+    {
+      "scene_id": "s03",
+      "hook": "Nadie lo vio venir..."
+    },
+    {
+      "scene_id": "s04",
+      "hook": "Entonces ocurrió algo inesperado..."
+    },
+    {
+      "scene_id": "s05",
+      "hook": "Ese momento lo cambió todo..."
+    },
+    {
+      "scene_id": "s06",
+      "hook": "La situación empeoró..."
+    },
+    {
+      "scene_id": "s07",
+      "hook": "No había vuelta atrás..."
+    },
+    {
+      "scene_id": "s08",
+      "hook": "Todo estaba por colapsar..."
+    },
+    {
+      "scene_id": "s09",
+      "hook": "La verdad salió a la luz..."
+    },
+    {
+      "scene_id": "s10",
+      "hook": "Nada volvería a ser igual..."
+    },
+    {
+      "scene_id": "s11",
+      "hook": "Y esto solo era el principio..."
+    }
+  ]
+}
