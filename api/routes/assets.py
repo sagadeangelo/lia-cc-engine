@@ -1,14 +1,51 @@
 from fastapi import APIRouter
 from fastapi.responses import FileResponse
-import os
+from pathlib import Path
 
 router = APIRouter()
 
-@router.get("/{project_id}/video")
-def get_video(project_id: str):
-    path = f"projects/{project_id}/final.mp4"
-    
-    if not os.path.exists(path):
-        return {"error": "video not ready"}
+BASE = Path("D:/LIA-CUENTA_CUENTOS/projects")
 
-    return FileResponse(path, media_type="video/mp4")
+
+# =========================
+# LISTAR IMÁGENES
+# =========================
+@router.get("/{project_id}/images")
+def list_images(project_id: str):
+
+    renders_path = BASE / project_id / "renders"
+
+    if not renders_path.exists():
+        return {"images": []}
+
+    images = []
+
+    for img in sorted(renders_path.glob("*.png")):
+        images.append(f"/assets/{project_id}/image/{img.name}")
+
+    return {"images": images}
+
+
+# =========================
+# SERVIR IMAGEN
+# =========================
+@router.get("/{project_id}/image/{filename}")
+def get_image(project_id: str, filename: str):
+
+    file_path = BASE / project_id / "renders" / filename
+
+    if not file_path.exists():
+        return {"error": "not found"}
+
+    return FileResponse(file_path)
+
+@router.get("/{project_id}/images")
+def list_images(project_id: str):
+    base = Path(f"D:/LIA-CUENTA_CUENTOS/projects/{project_id}/renders")
+
+    if not base.exists():
+        return {"images": []}
+
+    files = [f.name for f in base.iterdir() if f.suffix == ".png"]
+
+    return {"images": files}

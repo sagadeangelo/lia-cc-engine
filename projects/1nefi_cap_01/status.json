@@ -1,0 +1,11 @@
+{
+  "project_id": "1nefi_cap_01",
+  "stage": "build_timeline",
+  "progress": 1.0,
+  "total_scenes": 11,
+  "completed_scenes": 0,
+  "is_running": false,
+  "is_aborted": false,
+  "error": null,
+  "last_update": 1775888759.4281802
+}

@@ -19,6 +19,12 @@ from backend.services.project_service import (
     save_character_reference,
 )
 from backend.services.pipeline_service import run_full_pipeline, abort_pipeline
+import subprocess
+import sys
+import requests
+import time
+import uuid
+import shutil
 
 app = FastAPI(title="LIA-CC Backend", version="0.2.0")
 
@@ -43,6 +49,14 @@ PROJECTS_DIR = os.path.join(ROOT, "projects")
 os.makedirs(PROJECTS_DIR, exist_ok=True)
 app.mount("/api/projects_static", StaticFiles(directory=PROJECTS_DIR), name="projects_static")
 
+# NUEVO: Servir assets para Flutter
+app.mount("/assets", StaticFiles(directory=PROJECTS_DIR), name="assets")
+
+# NUEVO: Servir fotos temporales
+TEMP_PHOTO_DIR = os.path.join(ROOT, "temp", "photo")
+os.makedirs(TEMP_PHOTO_DIR, exist_ok=True)
+app.mount("/temp/photo", StaticFiles(directory=TEMP_PHOTO_DIR), name="temp_photo")
+
 running_projects = set()
 
 
@@ -50,7 +64,7 @@ class CreateProjectReq(BaseModel):
     project_id: str
 
 class SaveScriptReq(BaseModel):
-    content: str
+    script: str
 
 class CharacterReq(BaseModel):
     char_id: str
@@ -168,6 +182,40 @@ def run_all(project_id: str, background_tasks: BackgroundTasks):
         "project_id": project_id,
         "status": "started"
     }
+
+# ==========================================
+# PART 1 — VIDEO PIPELINE (NON-BLOCKING)
+# ==========================================
+def run_pipeline_worker(project_id: str):
+    print("API HIT: run-pipeline")
+    print("PROJECT:", project_id)
+    
+    scripts = [
+        "01_parse_chapter.py",
+        "02_build_scenes.py",
+        "03_build_prompts.py",
+        "04_prepare_render_queue.py",
+        "05_run_comfy_queue.py"
+    ]
+    
+    python_exe = sys.executable
+    for script in scripts:
+        print("STEP:", script)
+        script_path = os.path.join(ROOT, "scripts", script)
+        # Requisito: subprocess.Popen + wait
+        try:
+            p = subprocess.Popen([python_exe, script_path, project_id], cwd=ROOT)
+            p.wait()
+        except Exception as e:
+            print(f"Error running step {script}: {e}")
+            break
+
+@app.post("/projects/{project_id}/run-pipeline")
+async def api_run_pipeline(project_id: str, background_tasks: BackgroundTasks):
+    print("API HIT: run-pipeline")
+    print("PROJECT:", project_id)
+    background_tasks.add_task(run_pipeline_worker, project_id)
+    return {"status": "pipeline_started"}
 
 @app.post("/projects/{project_id}/abort")
 def api_abort_project(project_id: str):
@@ -289,33 +337,73 @@ def api_get_script(project_id: str):
 
 @app.post("/projects/{project_id}/script")
 def api_save_script(project_id: str, req: SaveScriptReq):
+    print("Saving script for:", project_id)
+    print("Payload:", req.dict())
     try:
-        save_project_script(project_id, req.content)
-        return {"ok": True, "project_id": project_id}
+        save_project_script(project_id, req.script)
+        return {"status": "saved"}
     except ValueError as e:
         raise HTTPException(status_code=404, detail=str(e))
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc))
 
 # ==========================================
-# ENDPOINTS CHARACTERS
+# ENDPOINTS CHARACTERS (FIXED)
 # ==========================================
 
 @app.get("/projects/{project_id}/characters")
 def api_get_characters(project_id: str):
+    print("API HIT: get-characters")
+    print("PROJECT:", project_id)
     try:
-        chars = list_characters(project_id)
-        return {"ok": True, "characters": chars}
+        # Requisito: Return [{ "name": "...", "image": "/assets/...png" }]
+        chars_dir = Path(ROOT) / "projects" / project_id / "characters"
+        results = []
+        if chars_dir.exists():
+            for f in chars_dir.glob("*.png"):
+                results.append({
+                    "name": f.stem,
+                    "image": f"/assets/{project_id}/characters/{f.name}"
+                })
+        return results
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc))
 
 @app.post("/projects/{project_id}/characters")
-def api_add_character(project_id: str, req: CharacterReq):
+async def api_add_character(project_id: str, name: str = Form(...), image: UploadFile = File(...)):
+    print("API HIT: create-character")
+    print("PROJECT:", project_id)
     try:
-        meta = add_character(project_id, req.char_id, req.display_name)
-        return {"ok": True, "character": meta}
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        chars_dir = Path(ROOT) / "projects" / project_id / "characters"
+        chars_dir.mkdir(parents=True, exist_ok=True)
+        
+        file_path = chars_dir / f"{name}.png"
+        with open(file_path, "wb") as buffer:
+            shutil.copyfileobj(image.file, buffer)
+            
+        return {"status": "saved", "name": name}
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
+# ==========================================
+# PART 4 — ASSETS ENDPOINT
+# ==========================================
+@app.get("/assets/{project_id}/images")
+async def get_assets_images(project_id: str):
+    print("API HIT: get-assets")
+    print("PROJECT:", project_id)
+    try:
+        renders_dir = Path(ROOT) / "projects" / project_id / "renders"
+        if not renders_dir.exists():
+            # Intentar fallback a output/renders/{project_id} si es necesario
+            renders_dir = Path(ROOT) / "output" / "renders" / project_id
+            
+        results = []
+        if renders_dir.exists():
+            for f in renders_dir.iterdir():
+                if f.is_file() and f.suffix.lower() in [".png", ".jpg", ".webp"]:
+                    results.append(f.name)
+        return results
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc))
 
@@ -348,138 +436,82 @@ import uuid
 import shutil
 import time
 
-@app.post("/projects/{project_id}/photo/generate")
-def api_generate_photo(
-    project_id: str, 
-    prompt: str = Form(...),
-    style: str = Form("cinematic_realistic"),
-    similarity: str = Form("muy_parecido"),
-    reference_image: UploadFile = File(None)
-):
+# ==========================================
+# PART 2 — PHOTO MODE (COMFY SAFE)
+# ==========================================
+class SimplePhotoReq(BaseModel):
+    prompt: str
+    negative_prompt: str = ""
+    style: str = "cinematic"
+
+@app.post("/generate/photo")
+async def api_generate_photo_simple(req: SimplePhotoReq):
+    print("API HIT: generate-photo")
     try:
-        root_dir = Path(__file__).resolve().parents[1]
-        script_path = root_dir / "scripts" / "05_run_comfy_queue.py"
+        # 1. Load basic workflow
+        workflow_path = Path(ROOT) / "workflows" / "image" / "photo_workflow.json"
+        if not workflow_path.exists():
+            raise HTTPException(status_code=404, detail="Workflow photo_workflow.json not found")
         
-        spec = importlib.util.spec_from_file_location("run_comfy", str(script_path))
-        run_comfy = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(run_comfy)
-
-        config_path = root_dir / "config" / "comfyui_config.json"
-        config = json.loads(config_path.read_text(encoding="utf-8"))
-        server_url = config.get("server_url", "http://127.0.0.1:8188")
-        
-        photo_id = "photo_" + str(uuid.uuid4())[:8]
-        output_prefix = f"output/renders/{project_id}/photos/{photo_id}"
-        
-        style_map = {
-            # SDXL WORKFLOWS
-            "pixar_3d": {
-                "ckpt": "realistas\\sd_xl_base_1.0.safetensors",
-                "lora": "pixarStyleModel_lora128.safetensors",
-                "workflow": "workflows/image/photo_workflow_sdxl.json"
-            },
-            "cinematic_realistic": {
-                "ckpt": "realistas\\xxmix9realisticsdxl_v10.safetensors",
-                "lora": None,
-                "workflow": "workflows/image/photo_workflow_sdxl.json"
-            },
-            "ultra_realistic": {
-                "ckpt": "realistas\\epicphotogasm_ultimateFidelity.safetensors",
-                "lora": None,
-                "workflow": "workflows/image/photo_workflow_sdxl.json"
-            },
+        with open(workflow_path, "r", encoding="utf-8") as f:
+            wf = json.load(f)
             
-            # SD 1.5 WORKFLOWS
-            "anime": {
-                "ckpt": "infantiles\\cornflowerStylizedAnime_12.safetensors",
-                "lora": None,
-                "workflow": "workflows/image/photo_workflow.json"
-            },
-            "kawaii": {
-                "ckpt": "infantiles\\kawaiiRealistic_v06.safetensors",
-                "lora": None,
-                "workflow": "workflows/image/photo_workflow.json"
-            },
-            "stylized": {
-                "ckpt": "infantiles\\tekakutli-kiki-v10.safetensors",
-                "lora": None,
-                "workflow": "workflows/image/photo_workflow.json"
-            }
-        }
+        # 2. Inject prompts (Node 10 for pos, 11 for neg)
+        if "10" in wf: wf["10"]["inputs"]["text"] = req.prompt
+        if "11" in wf: wf["11"]["inputs"]["text"] = req.negative_prompt
         
+        # 3. Send to ComfyUI
+        server_url = "http://127.0.0.1:8188"
+        response = requests.post(f"{server_url}/prompt", json={"prompt": wf, "client_id": str(uuid.uuid4())})
+        if response.status_code != 200:
+            raise HTTPException(status_code=500, detail="Error encolando en ComfyUI")
+            
+        prompt_id = response.json().get("prompt_id")
         
-        selected_style = style_map.get(style, style_map["cinematic_realistic"])
-        ckpt_name = selected_style["ckpt"]
-        lora_name = selected_style["lora"]
-        workflow_rel_path = selected_style["workflow"]
+        # 4. Poll /history/{prompt_id}
+        start_time = time.time()
+        timeout = 60 # Requisito
+        image_name = None
         
-        # Handle Reference Image Upload
-        denoise_val = 1.0
-        ref_image_name = None
-        if reference_image and reference_image.filename:
-            try:
-                from PIL import Image
-                import io
-                
-                # 1. Save locally in project
-                ref_dir = root_dir / "projects" / project_id / "input" / "references"
-                ref_dir.mkdir(parents=True, exist_ok=True)
-                timestamp = int(time.time() * 1000)
-                safe_filename = f"lia_cc_{timestamp}.png"
-                local_save_path = ref_dir / safe_filename
-                
-                # Redimensionar la imagen para evitar 'Ran out of memory when regular VAE encoding'
-                image_data = reference_image.file.read()
-                img = Image.open(io.BytesIO(image_data)).convert("RGB")
-                img.thumbnail((1024, 1024), Image.Resampling.LANCZOS)
-                img.save(local_save_path, format="PNG")
-                    
-                # Copy to ComfyUI input directory
-                comfy_dir = config.get("comfyui_dir", "C:/ComfyUI_windows_portable/ComfyUI")
-                comfy_input_dir = Path(comfy_dir) / "input"
-                comfy_input_dir.mkdir(parents=True, exist_ok=True)
-                comfy_save_path = comfy_input_dir / safe_filename
-                shutil.copy(local_save_path, comfy_save_path)
-                    
-                # 2. Change workflow to img2img version
-                workflow_rel_path = workflow_rel_path.replace(".json", "_img2img.json")
-                ref_image_name = safe_filename
-                
-                # 3. Apply Denoise mapping
-                denoise_map = {
-                    "identico": 0.35,
-                    "muy_parecido": 0.55,
-                    "algo_parecido": 0.75
-                }
-                denoise_val = denoise_map.get(similarity, 0.55)
-            except Exception as e:
-                raise HTTPException(status_code=500, detail=f"Error cargando la imagen de referencia: {str(e)}")
+        while time.time() - start_time < timeout:
+            hist_res = requests.get(f"{server_url}/history/{prompt_id}")
+            if hist_res.status_code == 200:
+                history = hist_res.json()
+                if prompt_id in history:
+                    outputs = history[prompt_id].get("outputs", {})
+                    # Buscar outputs de SaveImage (típicamente nodo 14 en nuestro flujo)
+                    for node_id, node_output in outputs.items():
+                        if "images" in node_output:
+                            image_name = node_output["images"][0].get("filename")
+                            break
+                    if image_name: break
+            time.sleep(2)
+            
+        if not image_name:
+            raise HTTPException(status_code=504, detail="Timeout generando imagen en ComfyUI")
+            
+        # 5. Extract and save to /temp/photo/
+        comfy_out_dir = "C:/ComfyUI_windows_portable/ComfyUI/output" # Default path
+        # Try to find comfy_dir from existing config
+        try:
+            config_path = Path(ROOT) / "config" / "comfyui_config.json"
+            if config_path.exists():
+                cfg = json.loads(config_path.read_text(encoding="utf-8"))
+                comfy_out_dir = cfg.get("output_dir", comfy_out_dir)
+        except: pass
+        
+        source_path = Path(comfy_out_dir) / image_name
+        dest_filename = f"generated_{int(time.time())}.png"
+        dest_path = Path(ROOT) / "temp" / "photo" / dest_filename
+        
+        if source_path.exists():
+            shutil.copy(source_path, dest_path)
+            return {"image_url": f"/temp/photo/{dest_filename}"}
+        else:
+            raise HTTPException(status_code=500, detail=f"Imagen no encontrada en ComfyUI: {source_path}")
 
-        wf = run_comfy.load_workflow(workflow_rel_path)
-        wf = run_comfy.inject_job_data(
-            workflow=wf,
-            workflow_rel_path=workflow_rel_path,
-            positive_prompt=prompt,
-            negative_prompt="bad quality, ugly, blurry, deformed, watermark, extra people, bad anatomy",
-            output_prefix=output_prefix,
-            reference_image=ref_image_name,
-            characters=[],
-            ckpt_name=ckpt_name,
-            lora_name=lora_name,
-            denoise=denoise_val
-        )
-        
-        result = run_comfy.queue_prompt(server_url, wf)
-        prompt_id = result.get("prompt_id")
-        
-        return {
-            "ok": True, 
-            "message": "Solicitud enviada a ComfyUI exitosamente.",
-            "prompt_id": prompt_id,
-            "photo_id": photo_id
-        }
     except Exception as exc:
-        raise HTTPException(status_code=500, detail=str(exc))
+        return {"ok": False, "error": str(exc)}
 
 @app.get("/projects/{project_id}/photo/results")
 def api_get_photo_results(project_id: str):

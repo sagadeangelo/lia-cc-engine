@@ -1,1 +1,0 @@
-print("Pendiente: ensamblar imágenes, audio, subtítulos y exportar video final.")

@@ -1,0 +1,174 @@
+{
+  "project_id": "1nefi_cap_01",
+  "title": "Capítulo 1nefi_cap_01",
+  "source": "Libro de Mormón",
+  "style": "semi_realistic_3d",
+  "scenes": [
+    {
+      "scene_id": "s01",
+      "summary": "CAPITULO UNO Yo, Nefi, habiendo nacido de buenos padres, por tanto, fui enseñado un poco en toda la ciencia de mi padre; y habiendo visto muchas aflicciones en el transcurso de mis días, siendo no obstante altamente favorecido del Señor en todos mis días; sí, habiendo tenido un gran conocimiento de la bondad y los misterios de Dios, por tanto,",
+      "characters": [
+        "Nefi"
+      ],
+      "dialogues": [],
+      "narration": "CAPITULO UNO Yo, Nefi, habiendo nacido de buenos padres, por tanto, fui enseñado un poco en toda la ciencia de mi padre; y habiendo visto muchas aflicciones en el transcurso de mis días, siendo no obstante altamente favorecido del Señor en todos mis días; sí, habiendo tenido un gran conocimiento de la bondad y los misterios de Dios, por tanto,",
+      "location": "río",
+      "mood": "solemne, emocional",
+      "shot_type": "medium",
+      "duration_sec": 6,
+      "visual_focus": "character",
+      "positive_prompt": "",
+      "negative_prompt": ""
+    },
+    {
+      "scene_id": "s02",
+      "summary": "hago una relación de mis hechos en mis días. Sí, hago una relación en el idioma de mi padre, que se compone de la enseñanza de los judíos y el idioma de los egipcios. Y sé que la relación que hago es verdadera; y la escribo con mi propia mano; y la escribo según mi conocimiento.",
+      "characters": [],
+      "dialogues": [],
+      "narration": "hago una relación de mis hechos en mis días. Sí, hago una relación en el idioma de mi padre, que se compone de la enseñanza de los judíos y el idioma de los egipcios. Y sé que la relación que hago es verdadera; y la escribo con mi propia mano; y la escribo según mi conocimiento.",
+      "location": "entorno bíblico",
+      "mood": "solemne",
+      "shot_type": "wide cinematic",
+      "duration_sec": 6,
+      "visual_focus": "environment",
+      "positive_prompt": "",
+      "negative_prompt": ""
+    },
+    {
+      "scene_id": "s03",
+      "summary": "Porque aconteció que en el principio del año primero del reinado de Sedequías, rey de Judá, mi padre Lehi, habiendo morado en Jerusalén todos sus días; y en aquel mismo año llegaron muchos profetas, profetizando al pueblo que debían arrepentirse, o la gran ciudad de Jerusalén tendría que ser destruida.",
+      "characters": [
+        "Lehi"
+      ],
+      "dialogues": [],
+      "narration": "Porque aconteció que en el principio del año primero del reinado de Sedequías, rey de Judá, mi padre Lehi, habiendo morado en Jerusalén todos sus días; y en aquel mismo año llegaron muchos profetas, profetizando al pueblo que debían arrepentirse, o la gran ciudad de Jerusalén tendría que ser destruida.",
+      "location": "ciudad antigua",
+      "mood": "profético, intenso",
+      "shot_type": "medium",
+      "duration_sec": 6,
+      "visual_focus": "character",
+      "positive_prompt": "",
+      "negative_prompt": ""
+    },
+    {
+      "scene_id": "s04",
+      "summary": "Por tanto, aconteció que mi padre Lehi oró al Señor, sí, de todo su corazón, en favor de su pueblo. Y aconteció que mientras mi padre oraba al Señor, bajó una columna de fuego y moró sobre una roca ante él; y vio y oyó muchas cosas; y a causa de las cosas que vio y oyó, tembló y se estremeció en gran manera.",
+      "characters": [
+        "Lehi"
+      ],
+      "dialogues": [],
+      "narration": "Por tanto, aconteció que mi padre Lehi oró al Señor, sí, de todo su corazón, en favor de su pueblo. Y aconteció que mientras mi padre oraba al Señor, bajó una columna de fuego y moró sobre una roca ante él; y vio y oyó muchas cosas; y a causa de las cosas que vio y oyó, tembló y se estremeció en gran manera.",
+      "location": "exterior rocoso",
+      "mood": "solemne, emocional",
+      "shot_type": "medium close-up",
+      "duration_sec": 6,
+      "visual_focus": "character",
+      "positive_prompt": "",
+      "negative_prompt": ""
+    },
+    {
+      "scene_id": "s05",
+      "summary": "Y aconteció que se volvió a su casa en Jerusalén, y se arrojó sobre su cama, anonadado a causa de las cosas que había visto. Y al quedar anonadado, se vio inmerso en el Espíritu del Señor, de tal manera que vio los cielos abiertos; y creyó ver a Dios sentado en su trono, rodeado de innumerables concursos de ángeles en actitud de cantar y alabar a su Dios.",
+      "characters": [],
+      "dialogues": [],
+      "narration": "Y aconteció que se volvió a su casa en Jerusalén, y se arrojó sobre su cama, anonadado a causa de las cosas que había visto. Y al quedar anonadado, se vio inmerso en el Espíritu del Señor, de tal manera que vio los cielos abiertos; y creyó ver a Dios sentado en su trono, rodeado de innumerables concursos de ángeles en actitud de cantar y alabar a su Dios.",
+      "location": "ciudad antigua",
+      "mood": "solemne, emocional",
+      "shot_type": "medium close-up",
+      "duration_sec": 6,
+      "visual_focus": "environment",
+      "positive_prompt": "",
+      "negative_prompt": ""
+    },
+    {
+      "scene_id": "s06",
+      "summary": "Y aconteció que vio a uno que descendía del cielo, y vio que su resplandor era superior al del sol del mediodía. Y vio también a otros doce, y sus resplandores excedían al de las estrellas del firmamento. Y descendieron y fueron por toda la faz de la tierra; y el primero vino y se puso ante mi padre, y le dio un libro, y le mandó que leyera.",
+      "characters": [],
+      "dialogues": [],
+      "narration": "Y aconteció que vio a uno que descendía del cielo, y vio que su resplandor era superior al del sol del mediodía. Y vio también a otros doce, y sus resplandores excedían al de las estrellas del firmamento. Y descendieron y fueron por toda la faz de la tierra; y el primero vino y se puso ante mi padre, y le dio un libro, y le mandó que leyera.",
+      "location": "río",
+      "mood": "solemne",
+      "shot_type": "medium close-up",
+      "duration_sec": 6,
+      "visual_focus": "environment",
+      "positive_prompt": "",
+      "negative_prompt": ""
+    },
+    {
+      "scene_id": "s07",
+      "summary": "Y aconteció que al leer, fue lleno del Espíritu del Señor. Y leyó, diciendo: ¡Ay, ay de Jerusalén!, porque he visto tus abominaciones. Sí, y muchas cosas leyó mi padre acerca de Jerusalén: que sería destruida, junto con sus habitantes; muchos perecerían por la espada, y muchos serían llevados cautivos a Babilonia.",
+      "characters": [],
+      "dialogues": [],
+      "narration": "Y aconteció que al leer, fue lleno del Espíritu del Señor. Y leyó, diciendo: ¡Ay, ay de Jerusalén!, porque he visto tus abominaciones. Sí, y muchas cosas leyó mi padre acerca de Jerusalén: que sería destruida, junto con sus habitantes; muchos perecerían por la espada, y muchos serían llevados cautivos a Babilonia.",
+      "location": "ciudad antigua",
+      "mood": "profético, intenso",
+      "shot_type": "medium close-up",
+      "duration_sec": 6,
+      "visual_focus": "environment",
+      "positive_prompt": "",
+      "negative_prompt": ""
+    },
+    {
+      "scene_id": "s08",
+      "summary": "Y aconteció que al leer mi padre muchas cosas grandes y maravillosas, exclamó muchas cosas al Señor, tales como: ¡Grandes y maravillosas son tus obras, oh Señor Dios Todopoderoso! ¡Tu trono está en las alturas de los cielos, y tu poder, y bondad, y misericordia son para con todos los habitantes de la tierra; y porque eres misericordioso, no permitirás que los que vengan a ti perezcan!",
+      "characters": [],
+      "dialogues": [],
+      "narration": "Y aconteció que al leer mi padre muchas cosas grandes y maravillosas, exclamó muchas cosas al Señor, tales como: ¡Grandes y maravillosas son tus obras, oh Señor Dios Todopoderoso! ¡Tu trono está en las alturas de los cielos, y tu poder, y bondad, y misericordia son para con todos los habitantes de la tierra; y porque eres misericordioso, no permitirás que los que vengan a ti perezcan!",
+      "location": "visión celestial",
+      "mood": "sagrado, sobrecogedor",
+      "shot_type": "wide cinematic",
+      "duration_sec": 6,
+      "visual_focus": "vision",
+      "positive_prompt": "",
+      "negative_prompt": ""
+    },
+    {
+      "scene_id": "s09",
+      "summary": "Y muchas cosas parecidas habló mi padre en alabanza a nuestro Dios, porque su alma se regocijaba y su corazón entero se llenaba a causa de las cosas que había visto, sí, en su visión. Y ahora yo, Nefi, no hago una relación completa de las cosas que mi padre ha escrito, porque él escribió muchas cosas que vio en visiones y también en sueños; y muchas cosas escribió él, que profetizó y habló a sus hijos, de las cuales no haré todas ellas aquí.",
+      "characters": [
+        "Nefi"
+      ],
+      "dialogues": [],
+      "narration": "Y muchas cosas parecidas habló mi padre en alabanza a nuestro Dios, porque su alma se regocijaba y su corazón entero se llenaba a causa de las cosas que había visto, sí, en su visión. Y ahora yo, Nefi, no hago una relación completa de las cosas que mi padre ha escrito, porque él escribió muchas cosas que vio en visiones y también en sueños; y muchas cosas escribió él, que profetizó y habló a sus hijos, de las cuales no haré todas ellas aquí.",
+      "location": "entorno bíblico",
+      "mood": "profético, intenso",
+      "shot_type": "medium close-up",
+      "duration_sec": 6,
+      "visual_focus": "character",
+      "positive_prompt": "",
+      "negative_prompt": ""
+    },
+    {
+      "scene_id": "s10",
+      "summary": "Pero haré relación de mis propios hechos en mis días. He aquí, yo, Nefi, os mostraré que la tierna misericordia del Señor se extiende sobre todos aquellos que, a causa de su fe, él ha escogido para hacerlos poderosos, sí, con el poder de la liberación.",
+      "characters": [
+        "Nefi"
+      ],
+      "dialogues": [],
+      "narration": "Pero haré relación de mis propios hechos en mis días. He aquí, yo, Nefi, os mostraré que la tierna misericordia del Señor se extiende sobre todos aquellos que, a causa de su fe, él ha escogido para hacerlos poderosos, sí, con el poder de la liberación.",
+      "location": "entorno bíblico",
+      "mood": "espiritual, reflexivo",
+      "shot_type": "medium",
+      "duration_sec": 6,
+      "visual_focus": "character",
+      "positive_prompt": "",
+      "negative_prompt": ""
+    },
+    {
+      "scene_id": "s11",
+      "summary": "Porque he aquí, aconteció que los judíos, por causa de las cosas que Lehi profetizó, se burlaron de él; y también otros, por causa de las cosas que él profetizó, se burlaron de él; y también otros",
+      "characters": [
+        "Lehi"
+      ],
+      "dialogues": [],
+      "narration": "Porque he aquí, aconteció que los judíos, por causa de las cosas que Lehi profetizó, se burlaron de él; y también otros, por causa de las cosas que él profetizó, se burlaron de él; y también otros",
+      "location": "entorno bíblico",
+      "mood": "profético, intenso",
+      "shot_type": "medium",
+      "duration_sec": 5,
+      "visual_focus": "character",
+      "positive_prompt": "",
+      "negative_prompt": ""
+    }
+  ]
+}

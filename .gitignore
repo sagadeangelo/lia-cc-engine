@@ -1,22 +1,49 @@
-# Python
+# =========================
+# PYTHON
+# =========================
 __pycache__/
 *.py[cod]
-*$py.class
-.venv/
+*.pyo
+*.pyd
+*.py.class
+
+# =========================
+# VIRTUAL ENVS
+# =========================
 venv/
+.venv/
 ENV/
 env/
 
-# LIA-CC Specific
-projects/
-output/
-temp/
+# =========================
+# LIA-CC (SOLO PESADO)
+# =========================
+
+# 🔥 NO ignorar todo projects, solo contenido pesado
+projects/*/renders/
+projects/*/clips/
+projects/*/audio/
+projects/*/final/
+projects/*/temp*
+projects/*/output/
+
+# Opcional (si no quieres subir input)
+# projects/*/input/
+
+# =========================
+# CONFIG SENSIBLE
+# =========================
+.env
 config/comfyui_config.json
 
+# =========================
 # IDEs
+# =========================
 .vscode/
 .idea/
 
+# =========================
 # OS
+# =========================
 .DS_Store
 Thumbs.db
